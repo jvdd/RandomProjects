@@ -25,7 +25,7 @@ cafeine_func = user.get_cafeine_function()
 print(cafeine_func(0))
 print(cafeine_func(5.7))
 
-user.plot_cafeine_decay()
+user.plot_cafeine_decay_from_now()
 
 '''
 inp = ' '

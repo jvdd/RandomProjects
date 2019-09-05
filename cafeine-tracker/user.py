@@ -43,13 +43,18 @@ class User:
         cafeine_func = lambda x : sum([func(x) for func in cafeine_funcs])
         return cafeine_func
 
-    def plot_cafeine_decay(self):
+    def plot_cafeine_decay_from_now(self):
         cafeine_func = self.get_cafeine_function()
-        x = np.linspace(0, 12, 12*60)
+        x = np.linspace(0, 24, 12*60)
         y = [cafeine_func(x_val) for x_val in x]
         plt.figure(figsize=(12,4))
         plt.title('Cafeine decay')
-        plt.plot(x, y)
+        plt.plot(x, y, label='cafeine')
+        plt.plot([0,24],[11,11],label='tea')
         plt.xlabel('Hours from now')
         plt.ylabel('Cafeine in blood (in mg)')
+        plt.legend()
         plt.show()
+
+    def plot_cafeine_decay_today(self):
+        raise NotImplementedError # TODO
