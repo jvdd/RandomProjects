@@ -3,18 +3,19 @@ Repository containing code of some random ideas.
 
 ## Table of contents
 
-- [Cafeine Tracker](#cafeine-tracker)
+- [Caffeine Tracker](#caffeine-tracker)
 
 ---
 
-## Cafeine Tracker
+## Caffeine Tracker
 
-Track the amount of cafeine that is still in your blood after consume some caffeinated drinks.  
-The amount of cafeine in your blood will be plotted for the next 24 hours.
+Track the amount of caffeine that is still in your blood after consume some caffeinated drinks.  
+The amount of caffeine in your blood will be plotted for the next 24 hours.
 
 ### Future work
-* Display the amount of cafeine in number of coffees, other caffeinated beverages
-* Do more resaerch on the decay time of cafeine
+* Display the amount of caffeine in number of coffees, other caffeinated beverages
+* Deploy online on some free provinding service using PlotLy as GUI
+* Do more resaerch on the decay time of caffeine
 * Support other caffeinated beverages
 
 ### Similar idea

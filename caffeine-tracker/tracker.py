@@ -11,21 +11,21 @@ drinks = {
     'tea' : CaffeinatedDrink('tea', 11)
     }
 
-user.add_drink(drinks['filtered_coffee'], datetime.datetime.strptime('08:30', "%H:%M"))
-user.add_drink(drinks['filtered_coffee'], datetime.datetime.strptime('10:30', "%H:%M"))
-user.add_drink(drinks['tea'], datetime.datetime.strptime('15:15', "%H:%M"))
+user.add_drink(drinks['espresso'], datetime.datetime.strptime('08:30', "%H:%M"))
+user.add_drink(drinks['filtered_coffee'], datetime.datetime.strptime('10:15', "%H:%M"))
+#user.add_drink(drinks['tea'], datetime.datetime.strptime('15:15', "%H:%M"))
 
-blood_level = user.get_cafeine_level()
+blood_level = user.get_caffeine_level()
 print('Caffeine in blood:', blood_level, 'mg.')
 print('Number of drinks running through my veins:')
 for drink in drinks:
     print(drink + ':', drinks[drink].quantity_to_drink(blood_level))
 
-cafeine_func = user.get_cafeine_function()
-print(cafeine_func(0))
-print(cafeine_func(5.7))
+caffeine_func = user.get_caffeine_function()
+print(caffeine_func(0))
+print(caffeine_func(5.7))
 
-user.plot_cafeine_decay_from_now()
+user.plot_caffeine_decay_from_now()
 
 '''
 inp = ' '
@@ -49,6 +49,6 @@ while inp.upper() != 'Q':
     print('\nEnter Q to stop adding consumption, otherwise press enter.')
     inp = input()
 
-print('\nYour current cafeine level:')
-print(user.get_cafeine_level(), 'mg')
+print('\nYour current caffeine level:')
+print(user.get_caffeine_level(), 'mg')
 '''

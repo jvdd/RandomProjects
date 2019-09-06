@@ -48,11 +48,11 @@ class CaffeinatedDrink(AbstractDrink):
     ''' A caffeinated drink.
     '''
 
-    def __init__(self, name, cafeine):
+    def __init__(self, name, caffeine):
         ''' Initializes the parameters for a caffeinated drink.
 
         :param name: the name of the caffeinated drink.
-        :param cafeine: the amount of cafeine in the drink in mg.
+        :param caffeine: the amount of caffeine in the drink in mg.
         '''
-        super().__init__(name, cafeine, half_life=5.7)
+        super().__init__(name, caffeine, half_life=5.7)
     
