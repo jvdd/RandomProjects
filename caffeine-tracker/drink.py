@@ -1,4 +1,7 @@
 
+from helper import datetime_to_float
+
+
 class Consumption:
     ''' Wrapper for a drink that keep tracks of when you consumed the drink
     '''
@@ -11,6 +14,15 @@ class Consumption:
         '''
         self.drink = drink
         self.consumed = consumed
+
+    def day_function(self, time):
+        consumed_time = datetime_to_float(self.consumed)
+        #time = datetime_to_float(time)
+        diff = time - consumed_time
+        if diff > 0:
+            return self.drink.get_quantity(diff)
+        return 0
+        
 
 
 class AbstractDrink:
@@ -37,6 +49,9 @@ class AbstractDrink:
 
     def get_quantity_lambda(self, time_passed):
         return lambda x : self.quantity * ( (1/2) ** ((time_passed +x) / self.half_life) )
+
+    def get_quantity_lambda_day(self, consumed_float):
+        return lambda x : self.quantity * ( (1/2) ** ((x - consumed_float) / self.half_life) ) if consumed_float <= x else 0
 
     def quantity_to_drink(self, quantity):
         '''
